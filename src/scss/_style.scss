@@ -1,0 +1,11 @@
+a{
+    text-decoration: none!important;
+}
+.not-layout{
+    max-width: 545px;
+    margin: auto;
+    margin-top: 10rem;
+    & > *{
+        margin-bottom: 15px;
+    }
+}
