@@ -87,7 +87,8 @@ const routes = [
       title: 'Add Product'
     },
     path: '/admin/product',
-    component: () => import(/* webpackChunkName: "tables" */ '@/views/admin/AddProduct.vue')
+    name: 'add.product',
+    component: () => import(/* webpackChunkName: "tables" */ '@/views/admin/ProductForm.vue')
   },
   {
     meta: {

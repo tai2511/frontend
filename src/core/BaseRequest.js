@@ -10,13 +10,27 @@ export default {
       return {Authorization: 'Bearer ' + token}
     }
   },
-  get(url){
+  get(url, data = ''){
     return axios.get(apiUrl + url,
-      { headers: this.getHearder()}
+      { 
+        headers: this.getHearder(),
+        params: data
+      }
     )
   },
   post(url, data){
     return axios.post(apiUrl + url,
+      data,
+      { headers: this.getHearder()}
+    )
+  },
+  delete(url,id){
+    return axios.delete(apiUrl + url + id,
+      { headers: this.getHearder()}
+    )
+  },
+  patch(url,data){
+    return axios.patch(apiUrl + url + data.id,
       data,
       { headers: this.getHearder()}
     )

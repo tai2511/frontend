@@ -9,7 +9,7 @@
       <div class="form-group">
         <label for="password">Password</label>
         <input v-model="userInfo.password" type="password" name="password" class="form-control" :class="{'is-invalid':errors.password}" id="password">
-        <div v-if="errors.email" class="invalid-feedback">{{errors.password[0]}}</div>
+        <div v-if="errors.password" class="invalid-feedback">{{errors.password[0]}}</div>
       </div>
       <div class="d-flex">
         <button type="submit" class="btn btn-primary">Login</button>
